@@ -11,7 +11,7 @@ export function App() {
   const [bad, setBad] = useState(0);
   
 
-  const onBtnClick = feedback => {
+  const handleFeedbackChange = feedback => {
     switch (feedback) {
       case 'good':
         setGood(prevState => prevState + 1);
@@ -43,16 +43,16 @@ export function App() {
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={feedbacks}
-            onBtnClick={onBtnClick}
+            onBtnClick={handleFeedbackChange}
           />
         </Section>
         <Section title="Statistics">
-          {this.countTotalFeedback() > 0 ? (
+          {countTotalFeedback() > 0 ? (
             <Statistics
               good={good}
               neutral={neutral}
               bad={bad}
-              total={this.countTotalFeedback()}
+              total={countTotalFeedback()}
               positivePercentage={countPositiveFeedbackPercentage()}
             />
           ) : (
