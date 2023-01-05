@@ -7,7 +7,7 @@ import Notification from './Notification';
 export function App() {
   
   const [good, setGood] = useState(0);
-  const [neutral, setNaturel] = useState(0);
+  const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
   
 
@@ -16,8 +16,8 @@ export function App() {
       case 'good':
         setGood(prevState => prevState + 1);
         break;
-      case 'naturel':
-        setNaturel(prevState => prevState + 1);
+      case 'neutral':
+        setNeutral(prevState => prevState + 1);
         break;
       case 'bad':
         setBad(prevState => prevState + 1);
